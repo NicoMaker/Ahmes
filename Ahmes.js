@@ -2,14 +2,18 @@ function CalcolaAhmes() {
     let numero1 = InserisciNumero1();
     let numero2 = InserisciNumero2();
 
-    if (numero1 == " ") {
-        document.getElementById("passaggi") = "inserisci un numero valido";
-        document.getElementById("risultato") = "";
+    if(numero1 == 0 || numero2 == 0){
+        let risultato = CalcolaRisultato(numero1,numero2);
+        let StampaRisultato = "il risultato finale è " + risultato;
+        document.getElementById("risultato").innerHTML = StampaRisultato
+        return;
+    }
+    if (numero1 == "") {
+        alert("inserisci un numero valido")
     }
     else {
-        if (numero2 == " ") {
-            document.getElementById("passaggi") = "inserisci un numero valido";
-            document.getElementById("risultato") = "";
+        if (numero2 == "") {
+            alert("inserisci un numero valido")
         }
         else {
             let risultato = CalcolaRisultato(numero1, numero2);
