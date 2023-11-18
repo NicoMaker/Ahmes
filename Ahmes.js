@@ -2,26 +2,34 @@ function CalcolaAhmes() {
     let numero1 = InserisciNumero1();
     let numero2 = InserisciNumero2();
 
-    if(numero1 == 0 || numero2 == 0){
-        let risultato = CalcolaRisultato(numero1,numero2);
-        let StampaRisultato = "il risultato finale è " + risultato;
+    if(isNaN(numero1))
+    {
+        let StampaRisultato = "Inserisci numero 1 valido"
         document.getElementById("risultato").innerHTML = StampaRisultato
-        return;
     }
-    if (numero1 == "") {
-        alert("inserisci un numero valido")
-    }
-    else {
-        if (numero2 == "") {
-            alert("inserisci un numero valido")
+    else
+    {
+        if(isNaN(numero2))
+        {
+            let StampaRisultato = "Inserisci numero 2 valido"
+            document.getElementById("risultato").innerHTML = StampaRisultato
         }
-        else {
-            let risultato = CalcolaRisultato(numero1, numero2);
-
-            let StampaRisultato = "il risultato finale è " + risultato;
-            document.getElementById("risultato").innerHTML = StampaRisultato;
+        else
+        {
+            if(numero1 == 0 || numero2 == 0){
+                let risultato = CalcolaRisultato(numero1,numero2);
+                let StampaRisultato = "il risultato finale è " + risultato;
+                document.getElementById("risultato").innerHTML = StampaRisultato
+                return;
+            }
+            else {
+                    let risultato = CalcolaRisultato(numero1, numero2);
+        
+                    let StampaRisultato = "il risultato finale è " + risultato;
+                    document.getElementById("risultato").innerHTML = StampaRisultato
+        
+            }
         }
-
     }
 }
 
