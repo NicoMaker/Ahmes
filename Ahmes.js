@@ -61,16 +61,16 @@ function CalcolaRisultato(numero1, numero2) {
         passaggio++;
 
         if (numero1 % 2 == 0) {
-            StampaHtml += passaggio + ") passaggio visto che " + numero1 + " è pari allora --> (" + numero1 + "/ 2) + (2 * " + numero2 + ")";
+            StampaHtml += passaggio + ") passaggio visto che " + numero1 + " è pari allora --> (" + numero1 + " / 2) + (2 * " + numero2 + ")";
             numero1 = numero1 / 2;
             numero2 = numero2 * 2;
         }
         else {
             if (resto == 0)
-                StampaHtml += passaggio + ") passaggio visto che " + numero1 + " è dispari allora --> (" + numero1 + "- 1) + (" + numero2 + " + " + numero2 + ")";
+                StampaHtml += passaggio + ") passaggio visto che " + numero1 + " è dispari allora --> (" + numero1 + " - 1) + (" + numero2 + " + " + numero2 + ")";
 
             else {
-                StampaHtml += passaggio + ") passaggio visto che " + numero1 + " è dispari allora --> (" + numero1 + "- 1) + (" + numero2 + " + " + resto + ")";
+                StampaHtml += passaggio + ") passaggio visto che " + numero1 + " è dispari allora --> (" + numero1 + " - 1) + (" + numero2 + " + " + resto + ")";
             }
 
             numero1--;
