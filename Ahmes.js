@@ -67,11 +67,10 @@ function CalcolaRisultato(numero1, numero2) {
         }
         else {
             if (resto == 0)
-                StampaHtml += passaggio + ") passaggio visto che " + numero1 + " è dispari allora --> (" + numero1 + " - 1) + (" + numero2 + " + " + numero2 + ")";
+                StampaHtml += passaggio + ") passaggio visto che " + numero1 + " è dispari allora --> (" + numero1 + " - 1) + "+ numero2;
 
-            else {
+            else
                 StampaHtml += passaggio + ") passaggio visto che " + numero1 + " è dispari allora --> (" + numero1 + " - 1) + (" + numero2 + " + " + resto + ")";
-            }
 
             numero1--;
             resto += numero2;
