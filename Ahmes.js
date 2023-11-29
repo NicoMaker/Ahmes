@@ -44,15 +44,9 @@ function CalcolaAhmes() {
     }
 }
 
-function InserisciNumero1() {
-    let numero1 = parseInt(document.getElementById("numero1").value);
-    return numero1;
-}
+let InserisciNumero1 = ()  => numero1 = parseInt(document.getElementById("numero1").value)
 
-function InserisciNumero2() {
-    let numero2 = parseInt(document.getElementById("numero2").value);
-    return numero2;
-}
+let InserisciNumero2 = () => numero2 = parseInt(document.getElementById("numero2").value);
 
 function CalcolaRisultato(numero1, numero2) {
     let resto = 0, passaggio = 0, StampaHtml = "";
